@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Dev Works</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FJPMWSPT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5FJPMWSPT0');
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="#"><span>DV</span>Dev Works</a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about">Inicio</a></li>
+      <li><a href="#skill">Nosotros</a></li>
+      <li><a href="#portfolio">Trabajos</a></li>
+      <li><a href="#review">Tecnologias</a></li>
+      <li><a href="#contactame">Contactanos</a></li>
+      <li><a href="politicas-de-privacidad.html">Politcas de Privacidad</a></li>
+      <button id="toggleTheme" class="btn">Modo oscuro</button>
+
+
+      <li><a href="assets/CV.pdf" download="">Cotiza Gratis</a></li>
+    </ul>
+    <div class="nav__btn">
+      <a target="_blank"
+        href="https://wa.me/59178048365?text=Hola%20Dev Works%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.">Cotiza
+        Gratis</a>
+    </div>
+  </nav>
+
+  <header class="section__container header__container" id="about">
+    <div class="header__image">
+      <img src="assets/logos.png" alt="header" />
+    </div>
+    <div class="header__content">
+      <p class="section__subheader">Welcome</p>
+      <h1>Digitaliza <span>Tu Negocio</span> con nosotros</h1>
+      <p class="section__description">
+        Haz crecer y moderniza tu negocio en la era digital. Estamos en Santa Cruz y te ofrecemos una consulta gratuita
+        para ayudarte. ¡Contáctanos hoy mismo!
+      </p>
+      <div class="header__btns">
+        <a target="_blank"
+          href="https://wa.me/59178048365?text=Hola%20Dev%20Works%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
+          class="btn">Contáctanos</a>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=61565184956701">
+          Facebook
+          <span><i class="ri-arrow-right-up-line"></i></span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="section__container stats__container">
+    <div class="stats__card">
+      <h4 style="color: rgb(54, 204, 66);">Santa Cruz</h4>
+      <p>Bolivia</p>
+    </div>
+    <div class="stats__divider"></div>
+    <div class="stats__card">
+      <h4 id="currentTime" class="time-box" >00:00:00</h4>
+      <p>Hora</p>
+    </div>
+    <div class="stats__divider"></div>
+    <div class="stats__card">
+      <h4 id="currentDate" class="date-text">01/01/2024</h4>
+      <p>Fecha</p>
+    </div>
+  </section>
+
+  <script>
+
+
+    const toggleButton = document.getElementById('toggleTheme');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+
+
+    function updateTimeAndDate() {
+      const boliviaTime = new Date().toLocaleString('es-BO', {
+        timeZone: 'America/La_Paz',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+
+      const currentDate = new Date().toLocaleDateString('es-BO', {
+        timeZone: 'America/La_Paz',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+
+      document.getElementById('currentTime').textContent = boliviaTime;
+      document.getElementById('currentDate').textContent = currentDate;
+    }
+
+    setInterval(updateTimeAndDate, 1000);
+  </script>
+
+  <section class="section__container skill__container" id="skill">
+    <div class="skill__content">
+      <p class="section__subheader">Nosotros</p>
+      <h2 class="section__header">
+        Quienes somos <span>Dev Works?</span>
+      </h2>
+      <p class="section__description">
+        Estamos ubicados en Santa Cruz y nos dedicamos a ofrecer soluciones de desarrollo de software adaptadas a las
+        necesidades de nuestros clientes. Nuestro enfoque está en crear herramientas eficientes y personalizadas que
+        impulsen el crecimiento y la digitalización de los negocios.
+      </p>
+      <div class="skill__btn">
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=61565184956701" class="btn">Facebook</a>
+      </div>
+    </div>
+    <div class="skill__grid">
+      <div class="skill__card">
+        <span><i class="ri-pulse-line"></i></span>
+        <h4>Desarrollo a Medida</h4>
+        <p>
+          Creamos soluciones de software personalizadas para satisfacer las necesidades específicas de cada cliente,
+          utilizando las últimas tecnologías.
+        </p>
+        </p>
+      </div>
+      <div class="skill__card">
+        <span><i class="ri-settings-3-line"></i></span>
+        <h4>Integración de Sistemas</h4>
+        <p>
+          Implementamos sistemas que se integran perfectamente con tus procesos actuales, optimizando la eficiencia y el
+          rendimiento.
+        </p>
+      </div>
+      <div class="skill__card">
+        <span><i class="ri-team-line"></i></span>
+        <h4>Soporte y Asesoría</h4>
+        <p>
+          Ofrecemos soporte continuo y asesoría técnica para garantizar el éxito de tus proyectos a largo plazo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio__container" id="portfolio">
+    <div class="portfolio__content">
+      <p class="section__subheader">Trabajos</p>
+      <h2 class="section__header">
+        Proyectos de <span>Dev Works</span>
+      </h2>
+      <p class="section__description">
+        En Dev Works, estamos orgullosos de nuestros proyectos destacados. A continuación, te mostramos algunas de
+        nuestras soluciones de software personalizadas que han ayudado a nuestros clientes a alcanzar sus objetivos.
+      </p>
+      <div class="portfolio__btn">
+        <button class="btn">Show More</button>
+      </div>
+    </div>
+    <div class="portfolio__image__wrapper">
+      <div class="portfolio__image">
+        <img src="assets/toy.png" alt="portfolio" />
+        <img src="assets/urbanor.png" alt="portfolio" />
+
+        <img src="assets/ecomerce.png" alt="portfolio" />
+        <img src="assets/cai-logo.jpg" alt="portfolio" />
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container review__container" id="review">
+    <p class="section__subheader">Tecnologias</p>
+    <h2 class="section__header">
+      Tecnologias de nuestro <span>Desarrollo</span>
+    </h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+
+            </div>
+            <div class="review__details">
+              <img src="assets/flutter.png" alt="Flutter" />
+              <div>
+                <h4>Flutter</h4>
+                <h5>Framework de Google</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              Flutter permite crear aplicaciones móviles nativas con un solo código base.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/react.png" alt="React" />
+              <div>
+                <h4>React</h4>
+                <h5>Librería de JavaScript</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              React es una biblioteca popular para construir interfaces de usuario dinámicas y eficientes.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/php.png" alt="PHP" />
+              <div>
+                <h4>PHP</h4>
+                <h5>Lenguaje de Programación</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              PHP es uno de los lenguajes más utilizados para el desarrollo web backend.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/laravel.png" alt="Laravel" />
+              <div>
+                <h4>Laravel</h4>
+                <h5>Framework de PHP</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              Laravel es un potente framework PHP que simplifica el desarrollo web con herramientas avanzadas.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/wordpress-logo.png" alt="WordPress" />
+              <div>
+                <h4>WordPress</h4>
+                <h5>Sistema de Gestión De Contenidos</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              (CMS, por sus siglas en inglés) que permite crear y administrar sitios web de manera sencilla, sin necesidad de conocimientos avanzados de programación.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/sqlserver.png" alt="SQL Server" />
+              <div>
+                <h4>SQL Server</h4>
+                <h5>Sistema de Bases de Datos</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              SQL Server es un robusto sistema de bases de datos de Microsoft, ideal para grandes organizaciones.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/nestjs.jpg" alt="NestJS" />
+              <div>
+                <h4>NestJS</h4>
+                <h5>Framework de JavaScript</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              NestJS es un framework de desarrollo backend para Node.js que utiliza TypeScript y está inspirado en la arquitectura de Angular.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="review__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <div class="review__details">
+              <img src="assets/docker.png" alt="Docker" />
+              <div>
+                <h4>Docker</h4>
+                <h5>Contenedor de Proyectos</h5>
+              </div>
+            </div>
+            <br>
+            <p>
+              Docker es una plataforma que permite empaquetar aplicaciones y sus dependencias en contenedores.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+   <section class="section__container contact__container" id="contactame">
+        <p class="section__subheader">Contáctanos</p>
+        <h2 class="section__header">Estamos en <span>Santa Cruz</span></h2>
+        <p class="section__description">
+            ¿Tienes un proyecto en mente? Ya sea que necesites un nuevo sitio web, una renovación, o funcionalidades
+            personalizadas, en Dev Works estamos aquí para ayudarte a llevar tu negocio al siguiente nivel.
+        </p>
+        
+        <!-- Formulario con Formspree -->
+        <form id="contactForm" action="https://formspree.io/f/xqadlyyv" method="POST">
+            <input type="text" name="name" placeholder="Nombre completo" required />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <input type="tel" name="phone" placeholder="Número de teléfono" required />
+            <input type="text" name="budget" placeholder="Presupuesto estimado" />
+            <textarea name="message" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+        
+        <div id="formspree-success" class="formspree-status success">
+            ¡Gracias por tu mensaje! Te contactaremos pronto.
+        </div>
+        
+        <div id="formspree-error" class="formspree-status error">
+            Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
+        </div>
+    </section>
+
+    <script>
+        // Manejar el envío del formulario a Formspree
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('formspree-success');
+        const errorMessage = document.getElementById('formspree-error');
+        
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            // Ocultar mensajes previos
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Mostrar mensaje de éxito
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Desplazarse suavemente al mensaje de éxito
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    throw new Error('Error en la respuesta del servidor');
+                }
+            } catch (error) {
+                // Mostrar mensaje de error
+                errorMessage.style.display = 'block';
+                console.error('Error:', error);
+            }
+        });
+    </script>
+
+  <footer class="section__container footer__container">
+    <div class="footer__content">
+      <p class="footer__text">
+        Impulsamos negocios en la era digital con soluciones tecnológicas a medida.
+        <strong></strong>
+      </p>
+
+      <ul class="footer__socials">
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/company/105599695/admin/dashboard/" aria-label="Linkedin">
+            <i class="ri-linkedin-box-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.facebook.com/share/15L4fQ2yF4/?mibextid=qi2Omg" aria-label="Linkedin">
+            <i class="ri-facebook-box-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/devworks1" aria-label="Gitub">
+            <i class="ri-github-fill"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="https://wa.me/59178048365" class="whatsapp-float" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+     </a>
+  </footer>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
